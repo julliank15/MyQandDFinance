@@ -66,7 +66,7 @@ public class InfoAct extends Activity {
 				 */
 
 				Intent intent = new Intent(getApplicationContext(), TaxAct.class);
-				intent.putExtra("Salary Value", userSalary);
+				intent.putExtra("My Salary", userSalary);
 				// intent.putExtra("Parameter Name1", userNumber1);
 				startActivity(intent);
 			}

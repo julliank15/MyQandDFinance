@@ -36,7 +36,9 @@ public enum Shared
 	public double mySalaryAfterTax;
 	public double spouseSalaryAfterTax;
 	public double combinedAfterTax;
-	public double tax;
+	public double stateTax;
+	public double federalTax;
+	public int retireAge;
 	
 
 }

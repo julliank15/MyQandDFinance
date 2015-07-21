@@ -30,6 +30,8 @@ import android.widget.Button;
 
 
 
+import android.widget.TextView;
+
 //Import Java packages
 import java.text.DecimalFormat;
 import java.util.Calendar;
@@ -139,7 +141,7 @@ public class MainAct extends Activity {
 			@Override
 			public void onClick(View v)
 			{
-				Intent intent = new Intent (getApplicationContext(), InfoAct.class);
+				Intent intent = new Intent (getApplicationContext(), InfoAct.class);			
 				startActivity(intent);
 			}
 			

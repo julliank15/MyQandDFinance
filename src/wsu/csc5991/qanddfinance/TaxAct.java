@@ -77,11 +77,9 @@ public class TaxAct extends Activity
         double mySalary = intent.getDoubleExtra("My Salary", 0);
         Intent intent1 = getIntent();
         double spouseSalary = intent1.getDoubleExtra("Spouse Salary", 0);
-        Intent intent2 = getIntent();
-        double tax = intent2.getDoubleExtra("Tax", 0);
         
         //Compute Salary After tax
-        Shared.Data.mySalaryAfterTax = mySalary - (mySalary*0.045);
+        Shared.Data.mySalaryAfterTax = mySalary - (mySalary*(Shared.Data.federalTax/100)) - (mySalary*(Shared.Data.stateTax/100));
         Shared.Data.spouseSalaryAfterTax = spouseSalary; // -(spouseSalary-tax);
         Shared.Data.combinedAfterTax = (Shared.Data.mySalaryAfterTax) + (Shared.Data.spouseSalaryAfterTax);
         

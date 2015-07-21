@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:background="#008000" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingBottom="@dimen/activity_vertical_margin" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:paddingTop="@dimen/activity_vertical_margin" android:orientation="vertical">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:background="#bdbdbd" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingBottom="@dimen/activity_vertical_margin" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:paddingTop="@dimen/activity_vertical_margin" android:orientation="vertical">
 <!--
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
 -->
@@ -6,15 +6,77 @@
 <!--
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
 -->
-<TextView android:id="@+id/tv1" 
-    android:text="Option 1 Screen" 
+<TextView
+    android:text="About" 
     android:textSize="42sp" 
     android:textStyle="bold" 
     android:textColor="#FFFFFF" 
     android:gravity="center" 
     android:layout_gravity="center" 
     android:layout_width="wrap_content" 
-    android:layout_height="match_parent" 
-    android:padding="4dp" 
-    android:layout_margin="4dp"/>
+    android:layout_height="wrap_content" 
+    android:paddingTop="10dp"
+    android:paddingBottom="50dp" />
+
+<TextView  
+    android:text="Quick &amp; Dirty Finance" 
+    android:textSize="33sp" 
+    android:textStyle="bold" 
+    android:textColor="#FFFFFF" 
+    android:gravity="center" 
+    android:layout_gravity="start" 
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content" />
+
+<TextView 
+    android:text="Version: 1.01" 
+    android:textSize="20sp" 
+    android:textStyle="italic" 
+    android:textColor="#FFFFFF" 
+    android:gravity="center" 
+    android:layout_gravity="center" 
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content" />
+
+<TextView 
+    android:text="" 
+    android:textSize="20sp" 
+    android:textStyle="italic" 
+    android:textColor="#FFFFFF" 
+    android:gravity="center" 
+    android:layout_gravity="center" 
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content" />
+
+<TextView 
+    android:text="Made By:" 
+    android:textSize="33sp" 
+    android:textStyle="bold" 
+    android:textColor="#FFFFFF" 
+    android:gravity="center" 
+    android:layout_gravity="center" 
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content" />
+    
+<TextView 
+    android:text="Q &amp; D Corp." 
+    android:textSize="33sp" 
+    android:textStyle="bold" 
+    android:textColor="#FFFFFF" 
+    android:gravity="center" 
+    android:layout_gravity="center" 
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content"
+    android:paddingBottom="4dp" />
+    
+<TextView 
+    android:text="Copyright, 2015" 
+    android:textSize="20sp" 
+    android:textStyle="italic" 
+    android:textColor="#FFFFFF" 
+    android:gravity="center" 
+    android:layout_gravity="center" 
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content" />
+    
 </LinearLayout>

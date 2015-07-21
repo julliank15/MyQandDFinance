@@ -9,7 +9,12 @@ package wsu.csc5991.qanddfinance;
 
 //Import Android packages
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 //Import Java packages
 import java.text.DecimalFormat;
@@ -45,10 +50,39 @@ public class SettingsAct extends Activity
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
-    	System.out.println("### DEBUG ### Option1-onCreate started at " +
-    			currentTime() + ".");
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.layhelp);
+		setContentView(R.layout.laysettings);
+		
+		//Update Variables
+		transferToMain();
+	}
+	
+	private void transferToMain() {
+		Button btn = (Button) findViewById(R.id.btnMain);
+		btn.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				//Get the information from the EditTexts
+				EditText federalTextEntry = (EditText) findViewById(R.id.etFederal1);
+				String federalUserData = federalTextEntry.getText().toString();
+				Shared.Data.federalTax = Double.parseDouble(federalUserData);
+				EditText stateTaxTextEntry = (EditText) findViewById(R.id.ettax1);
+				String stateTaxUserData = stateTaxTextEntry.getText().toString();
+				Shared.Data.stateTax = Double.parseDouble(stateTaxUserData);
+				EditText retireAgeTextEntry = (EditText) findViewById(R.id.etretireAge1);
+				String retireAgeUserData = retireAgeTextEntry.getText().toString();
+				Shared.Data.retireAge = Integer.parseInt(retireAgeUserData);
+				
+				// Transfer Data to next activity
+				Intent intent = new Intent(getApplicationContext(), MainAct.class);
+				intent.putExtra("Federal Tax", Shared.Data.federalTax);
+				intent.putExtra("State Tax", Shared.Data.stateTax);
+				intent.putExtra("Retirement Age", Shared.Data.retireAge);
+				startActivity(intent);
+				
+			}
+		});
 	}
 
     //----------------------------------------------------------------

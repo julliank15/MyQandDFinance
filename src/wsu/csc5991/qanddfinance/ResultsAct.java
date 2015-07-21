@@ -42,10 +42,11 @@ public class ResultsAct extends Activity {
 		int kid3Savings = ((18 - kid3Age) * 12) * monthlyKids;
 		int kid4Savings = ((18 - kid4Age) * 12) * monthlyKids;
 		int kid5Savings = ((18 - kid5Age) * 12) * monthlyKids;
+		int retirementSavings = (Shared.Data.retireAge*12)*Shared.Data.MonthlyRetire;
 		
 		//Display the values
-		TextView displayMonthlyKids = (TextView) findViewById(R.id.tvMonthlyKids1);
-		displayMonthlyKids.setText("" + monthlyKids);
+		TextView displayMonthlyRetirement = (TextView) findViewById(R.id.tvMonthlyRetire1);
+		displayMonthlyRetirement.setText("" + retirementSavings);
 		TextView displayKid1Age = (TextView) findViewById(R.id.tvKid1Savings1);
 		displayKid1Age.setText("" + kid1Savings);
 		TextView displayKid2Age = (TextView) findViewById(R.id.tvKid2Savings1);
