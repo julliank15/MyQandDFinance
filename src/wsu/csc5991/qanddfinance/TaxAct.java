@@ -25,11 +25,6 @@ import android.widget.TextView;
 
 
 
-
-
-
-
-
 // Import Java packages
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
@@ -228,7 +223,7 @@ public class TaxAct extends Activity
 	public void onBackPressed() {
 		System.out.println("### DEBUG ### Back button pressed at "
 				+ currentTime() + ".");
-		// super.onBackPressed();
+		super.onBackPressed();
 	}
 
 	// ----------------------------------------------------------------
