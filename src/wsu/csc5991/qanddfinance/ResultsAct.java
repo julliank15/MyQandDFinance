@@ -11,11 +11,13 @@ public class ResultsAct extends Activity {
 	
 	//Global Variables
 	private int monthlyKids;
+	private int myAge;
 	private int kid1Age;
 	private int kid2Age;
 	private int kid3Age;
 	private int kid4Age;
 	private int kid5Age;
+	private double inflationValue = 0;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,8 @@ public class ResultsAct extends Activity {
 		kid4Age = intent4.getIntExtra("Kid4 Age", 0);
 		Intent intent5 = getIntent();
 		kid5Age = intent5.getIntExtra("Kid5 Age", 0);
+		Intent intent6 = getIntent();
+		myAge = intent6.getIntExtra("My Age", 0);
 		
 		//Compute Savings
 		int kid1Savings = ((18 - kid1Age) * 12) * monthlyKids; 
@@ -42,11 +46,18 @@ public class ResultsAct extends Activity {
 		int kid3Savings = ((18 - kid3Age) * 12) * monthlyKids;
 		int kid4Savings = ((18 - kid4Age) * 12) * monthlyKids;
 		int kid5Savings = ((18 - kid5Age) * 12) * monthlyKids;
-		int retirementSavings = (Shared.Data.retireAge*12)*Shared.Data.MonthlyRetire;
+		double retirementSavings = Shared.Data.MonthlyRetire*12;
+		for (int i=1; i<(Shared.Data.retireAge - Shared.Data.UserAge); i++)
+		{
+			inflationValue = (retirementSavings + inflationValue); 
+			inflationValue = inflationValue - (inflationValue * 0.0322);
+			//retirementSavings = retirementSavings - (retirementSavings*0.0322);
+			
+		}
 		
 		//Display the values
 		TextView displayMonthlyRetirement = (TextView) findViewById(R.id.tvMonthlyRetire1);
-		displayMonthlyRetirement.setText("" + retirementSavings);
+		displayMonthlyRetirement.setText("" + inflationValue);
 		TextView displayKid1Age = (TextView) findViewById(R.id.tvKid1Savings1);
 		displayKid1Age.setText("" + kid1Savings);
 		TextView displayKid2Age = (TextView) findViewById(R.id.tvKid2Savings1);

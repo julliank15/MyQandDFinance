@@ -25,11 +25,6 @@ import android.widget.TextView;
 
 
 
-
-
-
-
-
 // Import Java packages
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
@@ -93,7 +88,7 @@ public class TaxAct extends Activity
         
         //Compute Salary After tax
         Shared.Data.mySalaryAfterTax = mySalary - (mySalary*(Shared.Data.federalTax/100)) - (mySalary*(Shared.Data.stateTax/100));
-        Shared.Data.spouseSalaryAfterTax = spouseSalary; // -(spouseSalary-tax);
+        Shared.Data.spouseSalaryAfterTax = spouseSalary - (spouseSalary*(Shared.Data.federalTax/100)) - (spouseSalary*(Shared.Data.stateTax/100));
         Shared.Data.combinedAfterTax = (Shared.Data.mySalaryAfterTax) + (Shared.Data.spouseSalaryAfterTax);
         
         //Displays the intent on the page
@@ -228,7 +223,7 @@ public class TaxAct extends Activity
 	public void onBackPressed() {
 		System.out.println("### DEBUG ### Back button pressed at "
 				+ currentTime() + ".");
-		// super.onBackPressed();
+		super.onBackPressed();
 	}
 
 	// ----------------------------------------------------------------

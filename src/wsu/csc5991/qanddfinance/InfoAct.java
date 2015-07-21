@@ -52,11 +52,17 @@ public class InfoAct extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				double userSalary = Shared.Data.Salary;
 
-				EditText userTextEntry = (EditText) findViewById(R.id.etSalary);
-				String userData = userTextEntry.getText().toString();
-				userSalary = Integer.parseInt(userData);
+				EditText salaryTextEntry = (EditText) findViewById(R.id.etSalary);
+				String salaryUserData = salaryTextEntry.getText().toString();
+				Shared.Data.Salary = Double.parseDouble(salaryUserData);
+				EditText ageTextEntry = (EditText) findViewById(R.id.etAge);
+				String ageUserData = ageTextEntry.getText().toString();
+				Shared.Data.UserAge = Integer.parseInt(ageUserData);
+				EditText spouseSalaryTextEntry = (EditText) findViewById(R.id.etSpouseSalary);
+				String spouseSalaryUserData = spouseSalaryTextEntry.getText().toString();
+				Shared.Data.SpouseSalary = Double.parseDouble(spouseSalaryUserData);
+				
 
 				/*
 				 * EditText userTextEntry1 = (EditText)
@@ -66,7 +72,9 @@ public class InfoAct extends Activity {
 				 */
 
 				Intent intent = new Intent(getApplicationContext(), TaxAct.class);
-				intent.putExtra("My Salary", userSalary);
+				intent.putExtra("My Salary", Shared.Data.Salary);
+				intent.putExtra("My Age", Shared.Data.UserAge);
+				intent.putExtra("Spouse Salary", Shared.Data.SpouseSalary);
 				// intent.putExtra("Parameter Name1", userNumber1);
 				startActivity(intent);
 			}
