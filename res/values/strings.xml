@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">QandDFinance</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_info">InfoAct</string>
+    <string name="title_activity_married">MarriedAct</string>
+    <string name="title_activity_kids">KidsAct</string>
+    <string name="title_activity_tax">TaxAct</string>
+    <string name="title_activity_advisor">AdvisorAct</string>
+    <string name="title_activity_forecast">ForecastAct</string>
+    <string name="title_activity_results">ResultsAct</string>
+    <string name="title_activity_help">HelpAct</string>
+    <string name="title_activity_settings">SettingsAct</string>
+    <string name="title_activity_about">AboutAct</string>
+
+</resources>
