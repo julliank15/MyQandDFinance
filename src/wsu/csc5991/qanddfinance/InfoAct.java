@@ -41,7 +41,6 @@ public class InfoAct extends Activity {
 		setContentView(R.layout.layinfo);
 
 		setUpDoMathButton();
-		setgetSpouseInfo();
 		setKidInfo();
 
 	}
@@ -73,26 +72,7 @@ public class InfoAct extends Activity {
 			}
 		});
 	}
-
 	
-	private void setgetSpouseInfo() {
-		// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-		// start married activity if yes button clicked
-		// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-		Button btnMarriedYes = (Button) findViewById(R.id.btnMarriedYes);
-		btnMarriedYes.setOnClickListener(new View.OnClickListener() {
-
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-
-				Intent intent = new Intent(getApplicationContext(),
-						MarriedAct.class);
-
-				startActivity(intent);
-			}
-		});
-	}
-
 	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	// start kids activity
 	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -50,7 +50,7 @@
             android:textSize="25sp" />
         
         <TextView
-            android:id="@+id/dollarSymbol"
+            android:id="@+id/dollarSymbol1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
@@ -64,7 +64,7 @@
 
         <EditText
             android:id="@+id/etSalary"
-            android:layout_width="150dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:layout_marginRight="10dp"
@@ -132,22 +132,36 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
             android:layout_marginTop="20dp"
-            android:text="Are you married?"
+            android:text="Spouse Salary: "
             android:textSize="25sp" />
 
-        <Button
-            android:id="@+id/btnMarriedYes"
+        <TextView
+            android:id="@+id/dollarSymbol2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:paddingRight="6dp"
+            android:text="$"
+            android:textStyle="bold"
+            android:textSize="25sp" />
+        
+        <EditText
+            android:id="@+id/etSpouseSalary"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
             android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginTop="20dp"
-            android:gravity="center"
-            android:text="Yes" />
-
+            android:gravity="start"
+            android:textColor="#77000000"
+            android:textSize="20sp" />
+        
+        
     </LinearLayout>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <!-- Area 3 Row -->
