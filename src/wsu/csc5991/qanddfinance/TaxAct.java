@@ -80,7 +80,7 @@ public class TaxAct extends Activity
         
         //Compute Salary After tax
         Shared.Data.mySalaryAfterTax = mySalary - (mySalary*(Shared.Data.federalTax/100)) - (mySalary*(Shared.Data.stateTax/100));
-        Shared.Data.spouseSalaryAfterTax = spouseSalary; // -(spouseSalary-tax);
+        Shared.Data.spouseSalaryAfterTax = spouseSalary - (spouseSalary*(Shared.Data.federalTax/100)) - (spouseSalary*(Shared.Data.stateTax/100));
         Shared.Data.combinedAfterTax = (Shared.Data.mySalaryAfterTax) + (Shared.Data.spouseSalaryAfterTax);
         
         //Displays the intent on the page
