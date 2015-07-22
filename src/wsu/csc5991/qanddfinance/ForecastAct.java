@@ -88,6 +88,9 @@ public class ForecastAct extends Activity
 			
 			@Override
 			public void onClick(View v) {
+				
+				try
+				{
 				//Get the information from the EditTexts
 				EditText retirementTextEntry = (EditText) findViewById(R.id.etRetire1);
 				String retirementUserData = retirementTextEntry.getText().toString();
@@ -101,6 +104,11 @@ public class ForecastAct extends Activity
 				intent.putExtra("Monthly Retirement", Shared.Data.MonthlyRetire);
 				intent.putExtra("Inflation", Shared.Data.inflation);
 				startActivity(intent);
+				}
+				catch(NumberFormatException e)
+				{
+					System.out.println("Error");
+				}
 				
 			}
 		});

@@ -86,7 +86,7 @@ public class ResultsAct extends Activity {
 
 		// Compute Savings
 		double retirementSavings = Shared.Data.MonthlyRetire * 12;
-		for (int i = 1; i < (Shared.Data.retireAge - Shared.Data.UserAge); i++) {
+		for (int i = 0; i < (Shared.Data.retireAge - Shared.Data.UserAge); i++) {
 			inflationValue = (retirementSavings + inflationValue);
 			inflationValue = inflationValue - (inflationValue * (Shared.Data.inflation/100));
 			// retirementSavings = retirementSavings -
@@ -98,7 +98,7 @@ public class ResultsAct extends Activity {
 		// Display the values
 		// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		TextView displayMonthlyRetirement = (TextView) findViewById(R.id.tvMonthlyRetire1);
-		displayMonthlyRetirement.setText("" + inflationValue);
+		displayMonthlyRetirement.setText("" + DoubleToFormatedString (inflationValue));
 
 		// s~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		// send message with results

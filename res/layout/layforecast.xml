@@ -65,7 +65,7 @@
             android:layout_height="wrap_content"
 
             android:inputType="numberDecimal"
-
+            android:text="0.00"
             style="@style/styTextWhite"
 
             android:textAppearance="?android:attr/textAppearanceMedium" />

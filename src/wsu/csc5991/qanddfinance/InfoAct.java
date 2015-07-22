@@ -51,6 +51,9 @@ public class InfoAct extends Activity {
 			@Override
 			public void onClick(View v) {
 				
+				try
+				{
+				
 				
 				// Define controls and variables
 				EditText salaryTextEntry = (EditText) findViewById(R.id.etSalary);
@@ -70,6 +73,11 @@ public class InfoAct extends Activity {
 				intent.putExtra("Spouse Salary", Shared.Data.SpouseSalary);
 				// intent.putExtra("Parameter Name1", userNumber1);
 				startActivity(intent);
+				}
+				catch(NumberFormatException e)
+				{
+					System.out.println("Error");
+				}
 			}
 		});
 	}
