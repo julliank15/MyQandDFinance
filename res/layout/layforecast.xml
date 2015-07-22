@@ -63,11 +63,11 @@
             android:id="@+id/etRetire1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-<<<<<<< HEAD
+
             android:inputType="numberDecimal"
-=======
+
             style="@style/styTextWhite"
->>>>>>> origin/master
+
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
     </LinearLayout>
