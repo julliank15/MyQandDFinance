@@ -93,6 +93,7 @@ public class ForecastAct extends Activity
 				String retirementUserData = retirementTextEntry.getText().toString();
 				Shared.Data.MonthlyRetire = Integer.parseInt(retirementUserData);
 				
+				
 				// Transfer Data to next activity
 				Intent intent = new Intent(getApplicationContext(), ResultsAct.class);
 				intent.putExtra("Monthly Retirement", Shared.Data.MonthlyRetire);
