@@ -28,8 +28,10 @@ import android.widget.TextView;
 
 
 
+
 // Import Java packages
 import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.util.Calendar;
 
 //--------------------------------------------------------------
@@ -57,7 +59,17 @@ public class AdvisorAct extends Activity
     //----------------------------------------------------------------
 
     // Declare variables
-   
+    
+    //method to format decimals to two significant figures
+    private static DecimalFormatSymbols DFS;
+    private static DecimalFormat myFormatter;
+    public static String DoubleToFormatedString(double value) {
+        DFS = new DecimalFormatSymbols();
+        DFS.setDecimalSeparator('.');
+        myFormatter = new DecimalFormat("#.00");
+        myFormatter.setDecimalFormatSymbols(DFS);
+        return myFormatter.format(value);
+    }
 
     //----------------------------------------------------------------
     // Activity overrides
@@ -84,11 +96,11 @@ public class AdvisorAct extends Activity
         
         //Displays the intent on the page
         TextView displayFixedCosts = (TextView) findViewById(R.id.tvFixed1);
-        displayFixedCosts.setText("" + fixedCosts);
+        displayFixedCosts.setText("" + DoubleToFormatedString(fixedCosts));
         TextView displaySavings = (TextView) findViewById(R.id.tvSavings1);
-        displaySavings.setText("" + savings);
+        displaySavings.setText("" + DoubleToFormatedString(savings));
         TextView displayFlexSpending = (TextView) findViewById(R.id.tvFlex1);
-        displayFlexSpending.setText("" + flexSpending);
+        displayFlexSpending.setText("" + DoubleToFormatedString(flexSpending));
         
         //Transfer Data to next pages
         transferToForecast();

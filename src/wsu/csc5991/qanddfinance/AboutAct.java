@@ -9,7 +9,11 @@ package wsu.csc5991.qanddfinance;
 
 //Import Android packages
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
 
 //Import Java packages
 import java.text.DecimalFormat;
@@ -48,7 +52,20 @@ public class AboutAct extends Activity
     	System.out.println("### DEBUG ### Option1-onCreate started at " +
     			currentTime() + ".");
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.layhelp);
+		setContentView(R.layout.layabout);
+		
+		//Initialize Button OnClickListener
+		Button btn = (Button) findViewById(R.id.btnMain);
+		btn.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				
+				//On Button Pressed Activity
+				Intent intent = new Intent(getApplicationContext(), MainAct.class);
+				startActivity(intent);
+			}
+		});
 	}
 
     //----------------------------------------------------------------

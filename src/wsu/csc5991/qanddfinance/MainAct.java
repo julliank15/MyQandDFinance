@@ -16,6 +16,8 @@ import wsu.csc5991.qanddfinance.R;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -31,6 +33,8 @@ import android.widget.Button;
 
 
 import android.widget.TextView;
+
+
 
 //Import Java packages
 import java.text.DecimalFormat;
@@ -77,7 +81,7 @@ public class MainAct extends Activity {
         getMenuInflater().inflate(R.menu.laymenu, menu);
         return true;
     }
-
+    
     //----------------------------------------------------------------
     // onOptionsItemSelected
     // Menu hierarchy

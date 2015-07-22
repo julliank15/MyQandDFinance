@@ -57,9 +57,16 @@
 
         <TextView
             android:id="@+id/tvSalary1"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" /month"
+            android:textStyle="italic"
+            android:textSize="15sp" />
 
     </LinearLayout>
 
@@ -84,9 +91,16 @@
 
     <TextView
     	android:id="@+id/tvSpouseSalary1"
-    	android:layout_width="match_parent"
+    	android:layout_width="wrap_content"
     	android:layout_height="wrap_content"
     	android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" /month"
+            android:textStyle="italic"
+            android:textSize="15sp" />
     
       </LinearLayout>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
@@ -110,10 +124,17 @@
 
     <TextView
         android:id="@+id/tvCombined1"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
     	android:layout_height="wrap_content"
     	android:textAppearance="?android:attr/textAppearanceMedium" />
     
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" /month"
+            android:textStyle="italic"
+            android:textSize="15sp" />
+		
     </LinearLayout>
     
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 

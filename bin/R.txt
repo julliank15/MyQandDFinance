@@ -214,19 +214,19 @@ int bool abc_config_actionMenuItemAllCaps 0x7f050005
 int bool abc_config_allowActionMenuItemTextWithIcon 0x7f050004
 int bool abc_config_closeDialogWhenTouchOutside 0x7f050006
 int bool abc_config_showMenuShortcutsWhenKeyboardPresent 0x7f050003
-int color abc_background_cache_hint_selector_material_dark 0x7f060045
-int color abc_background_cache_hint_selector_material_light 0x7f060046
+int color abc_background_cache_hint_selector_material_dark 0x7f060046
+int color abc_background_cache_hint_selector_material_light 0x7f060047
 int color abc_input_method_navigation_guard 0x7f060003
-int color abc_primary_text_disable_only_material_dark 0x7f060047
-int color abc_primary_text_disable_only_material_light 0x7f060048
-int color abc_primary_text_material_dark 0x7f060049
-int color abc_primary_text_material_light 0x7f06004a
-int color abc_search_url_text 0x7f06004b
+int color abc_primary_text_disable_only_material_dark 0x7f060048
+int color abc_primary_text_disable_only_material_light 0x7f060049
+int color abc_primary_text_material_dark 0x7f06004a
+int color abc_primary_text_material_light 0x7f06004b
+int color abc_search_url_text 0x7f06004c
 int color abc_search_url_text_normal 0x7f060000
 int color abc_search_url_text_pressed 0x7f060002
 int color abc_search_url_text_selected 0x7f060001
-int color abc_secondary_text_material_dark 0x7f06004c
-int color abc_secondary_text_material_light 0x7f06004d
+int color abc_secondary_text_material_dark 0x7f06004d
+int color abc_secondary_text_material_light 0x7f06004e
 int color accent_material_dark 0x7f06000f
 int color accent_material_light 0x7f06000e
 int color background_floating_material_dark 0x7f060006
@@ -246,6 +246,7 @@ int color button_material_dark 0x7f060010
 int color button_material_light 0x7f060011
 int color cyan 0x7f060036
 int color darkblue 0x7f060037
+int color darkgrey 0x7f060045
 int color dim_foreground_disabled_material_dark 0x7f06001e
 int color dim_foreground_disabled_material_light 0x7f06001f
 int color dim_foreground_material_dark 0x7f06001c
@@ -288,8 +289,8 @@ int color secondary_text_disabled_material_light 0x7f06002b
 int color silver 0x7f060042
 int color switch_thumb_disabled_material_dark 0x7f060014
 int color switch_thumb_disabled_material_light 0x7f060015
-int color switch_thumb_material_dark 0x7f06004e
-int color switch_thumb_material_light 0x7f06004f
+int color switch_thumb_material_dark 0x7f06004f
+int color switch_thumb_material_light 0x7f060050
 int color switch_thumb_normal_material_dark 0x7f060012
 int color switch_thumb_normal_material_light 0x7f060013
 int color white 0x7f060043
@@ -444,12 +445,22 @@ int id activity_chooser_view_content 0x7f090026
 int id alertTitle 0x7f090030
 int id always 0x7f090019
 int id beginning 0x7f090020
+<<<<<<< HEAD
 int id btSubmit 0x7f090072
 int id btnAdvisor 0x7f09008f
 int id btnForecast 0x7f090055
 int id btnMain 0x7f090089
 int id btnNext 0x7f09006e
 int id btnSubmit 0x7f090063
+=======
+int id btSubmit 0x7f090076
+int id btnAdvisor 0x7f090092
+int id btnForecast 0x7f090056
+int id btnKidsYes 0x7f090066
+int id btnMain 0x7f09004f
+int id btnNext 0x7f090072
+int id btnSubmit 0x7f090067
+>>>>>>> origin/master
 int id buttonPanel 0x7f090036
 int id checkbox 0x7f090038
 int id collapseActionView 0x7f09001a
@@ -460,6 +471,7 @@ int id decor_content_parent 0x7f09003e
 int id default_activity_button 0x7f090029
 int id dialog 0x7f09001e
 int id disableHome 0x7f09000d
+<<<<<<< HEAD
 int id dollarSymbol1 0x7f09005b
 int id dollarSymbol2 0x7f090061
 int id dropdown 0x7f09001f
@@ -479,6 +491,28 @@ int id etSpouseSalary 0x7f090062
 int id etState1 0x7f090082
 int id etretireAge1 0x7f090088
 int id ettax1 0x7f090086
+=======
+int id dollarSymbol1 0x7f09005e
+int id dollarSymbol2 0x7f090064
+int id dropdown 0x7f09001f
+int id edit_query 0x7f090042
+int id end 0x7f090021
+int id etAge 0x7f090061
+int id etFederal1 0x7f090088
+int id etKid1 0x7f090069
+int id etKid2 0x7f09006b
+int id etKid3 0x7f09006d
+int id etKid4 0x7f09006f
+int id etKid5 0x7f090071
+int id etKids1 0x7f09005a
+int id etRetire1 0x7f090058
+int id etSalary 0x7f09005f
+int id etSpouseAge 0x7f090075
+int id etSpouseSalary 0x7f090065
+int id etState1 0x7f090086
+int id etretireAge1 0x7f09008c
+int id ettax1 0x7f09008a
+>>>>>>> origin/master
 int id expand_activities_button 0x7f090027
 int id expanded_menu 0x7f090037
 int id home 0x7f090000
@@ -527,6 +561,7 @@ int id textSpacerNoButtons 0x7f090033
 int id title 0x7f09002c
 int id title_template 0x7f09002f
 int id topPanel 0x7f09002e
+<<<<<<< HEAD
 int id tv1 0x7f090058
 int id tvAge 0x7f09005d
 int id tvBlank 0x7f09008e
@@ -569,11 +604,60 @@ int id tvSpouseSalary1 0x7f09008b
 int id tvState 0x7f090081
 int id tvretireAge 0x7f090087
 int id tvtax 0x7f090085
+=======
+int id tv1 0x7f09005b
+int id tvAge 0x7f090060
+int id tvBlank 0x7f090091
+int id tvCombined 0x7f09008f
+int id tvCombined1 0x7f090090
+int id tvFederal 0x7f090087
+int id tvFixed 0x7f090050
+int id tvFixed1 0x7f090051
+int id tvFlex 0x7f090054
+int id tvFlex1 0x7f090055
+int id tvHeader 0x7f09005c
+int id tvKid1 0x7f090068
+int id tvKid1Savings 0x7f09007a
+int id tvKid1Savings1 0x7f09007b
+int id tvKid2 0x7f09006a
+int id tvKid2Savings 0x7f09007c
+int id tvKid2Savings1 0x7f09007d
+int id tvKid3 0x7f09006c
+int id tvKid3Savings 0x7f09007e
+int id tvKid3Savings1 0x7f09007f
+int id tvKid4 0x7f09006e
+int id tvKid4Savings 0x7f090080
+int id tvKid4Savings1 0x7f090081
+int id tvKid5 0x7f090070
+int id tvKid5Savings 0x7f090082
+int id tvKid5Savings1 0x7f090083
+int id tvKids 0x7f090059
+int id tvMarriage 0x7f090063
+int id tvMonthlyRetire 0x7f090078
+int id tvMonthlyRetire1 0x7f090079
+int id tvResults 0x7f090077
+int id tvRetire 0x7f090057
+int id tvSalary 0x7f09005d
+int id tvSalary1 0x7f09008d
+int id tvSavings 0x7f090052
+int id tvSavings1 0x7f090053
+int id tvSettings 0x7f090084
+int id tvSpouseAge 0x7f090074
+int id tvSpouseSalary 0x7f090073
+int id tvSpouseSalary1 0x7f09008e
+int id tvState 0x7f090085
+int id tvretireAge 0x7f09008b
+int id tvtax 0x7f090089
+>>>>>>> origin/master
 int id up 0x7f090001
 int id useLogo 0x7f090013
 int id withText 0x7f09001d
 int id wrap_content 0x7f090009
+<<<<<<< HEAD
 int id yearsOld 0x7f09005f
+=======
+int id yearsOld 0x7f090062
+>>>>>>> origin/master
 int integer abc_config_activityDefaultDur 0x7f080001
 int integer abc_config_activityShortDur 0x7f080000
 int integer abc_max_action_buttons 0x7f080002
