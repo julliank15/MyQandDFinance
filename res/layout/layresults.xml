@@ -1,6 +1,6 @@
 <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+
     xmlns:android="http://schemas.android.com/apk/res/android"
-    
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -21,13 +21,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:layout_marginBottom="20dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginBottom="50dp"
+      		android:layout_marginLeft="10dp"
+        	android:layout_marginRight="10dp"
+        	android:layout_marginTop="30dp"
             android:gravity="center"
             android:text="Results"
-            android:textSize="30sp" />
+            android:textSize="30sp" 
+            style="@style/styTextWhite"/>
     </LinearLayout>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <!-- Row 1 -->
@@ -57,6 +58,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:layout_marginTop="15dp"
+            style="@style/styTextWhite"
             android:textSize="20sp" />
     </LinearLayout>
     
@@ -81,10 +83,10 @@
             android:layout_marginTop="30dp"
             android:gravity="center"
             android:text="For Results to Phone"
-            android:textSize="20sp" 
+            android:textSize="20sp"
             />
     </LinearLayout>
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <!-- Row 3 -->
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
@@ -109,7 +111,6 @@
         <EditText
             android:id="@+id/etPhoneNumber"
             android:textSize="20sp"
-            
             android:background="@drawable/backgreen"
             android:inputType="phone"
             android:gravity="center"
@@ -119,7 +120,6 @@
             android:padding="8dp"
             android:layout_margin="8dp"
             />
-
     </LinearLayout>
     
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->

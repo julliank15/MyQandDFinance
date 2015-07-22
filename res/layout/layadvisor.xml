@@ -1,5 +1,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/greenfinance"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -18,12 +19,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="1dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
         android:gravity="center"
-        android:padding="10dp"
         android:text="50/20/30 Budget"
-        android:textSize="22sp"
-        android:textStyle="bold" />
+        android:textSize="30sp"
+        style="@style/styTextWhite" />
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
  -->
     <!-- Row 1 -->
@@ -52,16 +55,25 @@
             android:id="@+id/tvFixed"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-           
+            style="@style/styTextWhite"
             android:text="Fixed Costs: $"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <TextView
             android:id="@+id/tvFixed1"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            style="@style/styTextWhite"
             android:textAppearance="?android:attr/textAppearanceMedium" />
-
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" /month"
+            android:textStyle="italic"
+            style="@style/styTextWhite"
+            android:textSize="15sp" />
+		
     </LinearLayout>
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
@@ -80,15 +92,25 @@
         android:id="@+id/tvSavings"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-
-        android:text="Savings:"
+		style="@style/styTextWhite"
+        android:text="Savings: $"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     	<TextView
     	    android:id="@+id/tvSavings1"
-    	    android:layout_width="match_parent"
+    	    android:layout_width="wrap_content"
     	    android:layout_height="wrap_content"
+    	    style="@style/styTextWhite"
     	    android:textAppearance="?android:attr/textAppearanceMedium" />
+    	
+    	<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" /month"
+            android:textStyle="italic"
+            style="@style/styTextWhite"
+            android:textSize="15sp" />
+    	
     
       </LinearLayout>
     
@@ -103,32 +125,39 @@
         android:id="@+id/tvFlex"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-
-        android:text="Flexible Spending:"
+        style="@style/styTextWhite"
+        android:text="Flexible Spending: $"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+    	android:id="@+id/tvFlex1"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="left"
-        android:orientation="horizontal"
-        android:textAppearance="?android:attr/textAppearanceMedium" >
-
-          	<TextView
-          	    android:id="@+id/tvFlex1"
-          	    android:layout_width="match_parent"
-          	    android:layout_height="wrap_content"
-          	    android:textAppearance="?android:attr/textAppearanceMedium" />
-        
-      </LinearLayout>
+        style="@style/styTextWhite"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+          	
+    <TextView
+    	android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text=" /month"
+        android:textStyle="italic"
+        style="@style/styTextWhite"
+        android:textSize="15sp" />
 
     </LinearLayout>
 
    <Button
        android:id="@+id/btnForecast"
-       android:layout_width="wrap_content"
+       android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       
+       android:layout_marginBottom="20dp"
+       android:layout_marginLeft="100dp"
+       android:layout_marginRight="100dp"
+       android:layout_marginTop="50dp"
+       android:gravity="center"
+       android:background="@drawable/backdarkgreen"
+       style="@style/styTextWhite"
        android:text="Forecast" />
 
 </LinearLayout>

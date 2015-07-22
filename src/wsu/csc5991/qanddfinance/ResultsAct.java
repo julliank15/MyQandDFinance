@@ -1,5 +1,8 @@
 package wsu.csc5991.qanddfinance;
 
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -46,7 +49,6 @@ public class ResultsAct extends Activity {
 	private int kid5Age;
 	private double inflationValue = 0;
 
-	
 	// Declare control variables
 	private EditText etSendMessage;
     private EditText etPhoneNumber;
@@ -58,6 +60,7 @@ public class ResultsAct extends Activity {
 	// ----------------------------------------------------------------
 	//method to format decimals to two significant figures
 	// ----------------------------------------------------------------
+
     private static DecimalFormatSymbols DFS;
     private static DecimalFormat myFormatter;
     public static String DoubleToFormatedString(double value) {
@@ -67,9 +70,11 @@ public class ResultsAct extends Activity {
         myFormatter.setDecimalFormatSymbols(DFS);
         return myFormatter.format(value);
     }
+
 	// ----------------------------------------------------------------
 	// onCreate
 	// ----------------------------------------------------------------
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -114,7 +119,7 @@ public class ResultsAct extends Activity {
 		TextView displayMonthlyRetirement = (TextView) findViewById(R.id.tvMonthlyRetire1);
 		displayMonthlyRetirement.setText("" + inflationValue);
 
-		// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		// s~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		// send message with results
 		// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		sendMessageInfo();
