@@ -20,14 +20,7 @@ public enum Shared
 	 
 	// Declare enum fields
 	public double Salary;
-	public int Kids;
-	public int Kid1Age;
-	public int Kid2Age;
-	public int Kid3Age;
-	public int Kid4Age;
-	public int Kid5Age;
 	public int MonthlyRetire;
-	public int MonthlyKids;
 	public string FName;
 	public int UserAge;
 	public int SpouseAge;
@@ -39,6 +32,7 @@ public enum Shared
 	public double stateTax;
 	public double federalTax = 23;
 	public int retireAge;
+	public double inflation = 3.22;
 	
 
 }

@@ -85,18 +85,19 @@
         android:orientation="horizontal" >
 
     <TextView
-        android:id="@+id/tvKids"
+        android:id="@+id/tvInflation"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         style="@style/styTextWhite"
-        android:text="Kid(s) Saving Monthly: "
+        android:text="Inflation: "
         />
 
     	<EditText
-    	    android:id="@+id/etKids1"
+    	    android:id="@+id/etInflation1"
     	    android:layout_width="match_parent"
     	    android:layout_height="wrap_content"
     	    style="@style/styTextWhite"
+    	    android:text="3.22"
     	    android:textAppearance="?android:attr/textAppearanceMedium" />
     
       </LinearLayout>
