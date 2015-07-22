@@ -1,0 +1,32 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<!--
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+-->
+<!--  Style when control pressed  -->
+<!--
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+-->
+<item android:state_pressed="true">
+<shape>
+<solid android:color="#005000"/>
+<stroke android:width="1dp" android:color="#004600"/>
+<corners android:radius="8dp"/>
+<padding android:left="8dp" android:top="8dp" android:right="8dp" android:bottom="8dp"/>
+</shape>
+</item>
+<!--
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+-->
+<!--  Default style for control  -->
+<!--
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+-->
+<item>
+<shape>
+<gradient android:startColor="#005000" android:endColor="#004600" android:angle="270"/>
+<stroke android:width="1dp" android:color="#004600"/>
+<corners android:radius="4dp"/>
+<padding android:left="8dp" android:top="8dp" android:right="8dp" android:bottom="8dp"/>
+</shape>
+</item>
+</selector>

@@ -41,7 +41,7 @@ public class InfoAct extends Activity {
 		setContentView(R.layout.layinfo);
 
 		setUpDoMathButton();
-	
+		setKidInfo();
 
 	}
 
@@ -81,7 +81,24 @@ public class InfoAct extends Activity {
 		});
 	}
 	
-	
+	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	// start kids activity
+	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	private void setKidInfo() {
+		Button btnKidsYes = (Button) findViewById(R.id.btnKidsYes);
+		btnKidsYes.setOnClickListener(new View.OnClickListener() {
+
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+
+				Intent intent = new Intent(getApplicationContext(),
+						KidsAct.class);
+
+				startActivity(intent);
+			}
+		});
+	}
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
