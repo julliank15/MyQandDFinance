@@ -32,7 +32,8 @@ public enum Shared
 	public double stateTax;
 	public double federalTax = 23;
 	public int retireAge;
-	public double inflation = 3.22;
+	public String receivedMessage;
+
 	
 
 }

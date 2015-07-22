@@ -1,9 +1,10 @@
 <LinearLayout xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/greenfinance"
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="wsu.csc5991.qanddfinance.InfoAct" xmlns:android="http://schemas.android.com/apk/res/android">
+    tools:context="wsu.csc5991.qanddfinance.InfoAct" >
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <!-- Header -->
@@ -43,13 +44,13 @@
             android:id="@+id/tvMonthlyRetire"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
             android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="15dp"
             android:paddingRight="6dp"
             android:text="Retirement Savings: $"
-            style="@style/styTextWhite"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvMonthlyRetire1"
@@ -60,151 +61,91 @@
             style="@style/styTextWhite"
             android:textSize="20sp" />
     </LinearLayout>
-
-    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    
+    
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <!-- Row 2 -->
-    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-    <LinearLayout
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="start"
         android:orientation="horizontal" >
 
         <TextView
-            android:id="@+id/tvKid1Savings"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/tvMessageHeader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="20dp"
-            android:text="Kid1 Savings: $"
-            style="@style/styTextWhite"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/tvKid1Savings1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="20dp"
-            style="@style/styTextWhite"
-            android:textSize="20sp" />
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="For Results to Phone"
+            android:textSize="20sp"
+            />
     </LinearLayout>
-    
-     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <!-- Row 3 -->
-    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
     <LinearLayout
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-
-        <TextView
-            android:id="@+id/tvKid2Savings"
-            android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        >
+        
+       <TextView
+            android:text="Phone number:"
+            android:textSize="18sp"
+            android:gravity="left"
+            android:layout_gravity="center"
+            android:layout_width="140dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="20dp"
-            android:text="Kid2 Savings: $"
-            style="@style/styTextWhite"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/tvKid2Savings1"
-            android:layout_width="wrap_content"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            />
+            
+        <EditText
+            android:id="@+id/etPhoneNumber"
+            android:textSize="20sp"
+            android:background="@drawable/backgreen"
+            android:inputType="phone"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="160dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="20dp"
-            style="@style/styTextWhite"
-            android:textSize="20sp" />
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            />
     </LinearLayout>
     
-     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <!-- Row 4 -->
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
+   
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
-        <TextView
-            android:id="@+id/tvKid3Savings"
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/btnSmsMessage"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:background="@drawable/backgreen"
             android:layout_marginBottom="20dp"
-            android:layout_marginTop="20dp"
-            android:text="Kid3 Savings: $"
-            style="@style/styTextWhite"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/tvKid3Savings1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="20dp"
-            android:textSize="20sp" />
-    </LinearLayout>
-    
-     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-    <!-- Row 5 -->
-    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-
-        <TextView
-            android:id="@+id/tvKid4Savings"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginBottom="20dp"
-           	android:layout_marginTop="20dp"
-            android:text="Kid4 Savings: $"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/tvKid4Savings1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="20dp"
-            android:textSize="20sp" />
-    </LinearLayout>
-    
-     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-    <!-- Row 6 -->
-    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-
-        <TextView
-            android:id="@+id/tvKid5Savings"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:text="Kid5 Savings: $"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/tvKid5Savings1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="20dp"
-            android:textSize="20sp" />
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="Send Results"
+            android:textSize="20sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
-    
 </LinearLayout>
