@@ -1,8 +1,5 @@
 package wsu.csc5991.qanddfinance;
 
-import java.text.DecimalFormat;
-import java.text.DecimalFormatSymbols;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,7 +12,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.util.Calendar;
@@ -81,8 +77,8 @@ public class ResultsAct extends Activity {
 		etPhoneNumber = (EditText) findViewById(R.id.etPhoneNumber);
 				
 		
-
 		// Get the intent from previous pages
+
 		Intent intent = getIntent();
 		inflation = intent.getIntExtra("Inflation", 0);
 		Intent intent6 = getIntent();
@@ -114,8 +110,8 @@ public class ResultsAct extends Activity {
 	// start MessageAct activity
 	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	private void sendMessageInfo() {
-		Button btnKidsYes = (Button) findViewById(R.id.btnSmsMessage);
-		btnKidsYes.setOnClickListener(new View.OnClickListener() {
+		Button btnSendMessage = (Button) findViewById(R.id.btnSmsMessage);
+		btnSendMessage.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v)
 			{
