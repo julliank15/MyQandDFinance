@@ -92,14 +92,11 @@ public class ForecastAct extends Activity
 				EditText retirementTextEntry = (EditText) findViewById(R.id.etRetire1);
 				String retirementUserData = retirementTextEntry.getText().toString();
 				Shared.Data.MonthlyRetire = Integer.parseInt(retirementUserData);
-				EditText kidsTextEntry = (EditText) findViewById(R.id.etKids1);
-				String kidsUserData = kidsTextEntry.getText().toString();
-				Shared.Data.MonthlyKids = Integer.parseInt(kidsUserData);
 				
 				// Transfer Data to next activity
 				Intent intent = new Intent(getApplicationContext(), ResultsAct.class);
 				intent.putExtra("Monthly Retirement", Shared.Data.MonthlyRetire);
-				intent.putExtra("Monthly Kids", Shared.Data.MonthlyKids);
+				
 				startActivity(intent);
 				
 			}
