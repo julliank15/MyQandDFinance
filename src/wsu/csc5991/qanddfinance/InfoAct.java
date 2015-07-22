@@ -41,8 +41,7 @@ public class InfoAct extends Activity {
 		setContentView(R.layout.layinfo);
 
 		setUpDoMathButton();
-		setKidInfo();
-
+		
 	}
 
 	private void setUpDoMathButton() {
@@ -51,8 +50,9 @@ public class InfoAct extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-
+				
+				
+				// Define controls and variables
 				EditText salaryTextEntry = (EditText) findViewById(R.id.etSalary);
 				String salaryUserData = salaryTextEntry.getText().toString();
 				Shared.Data.Salary = Double.parseDouble(salaryUserData);
@@ -64,13 +64,6 @@ public class InfoAct extends Activity {
 				Shared.Data.SpouseSalary = Double.parseDouble(spouseSalaryUserData);
 				
 
-				/*
-				 * EditText userTextEntry1 = (EditText)
-				 * findViewById(R.id.etSalary); String userData1 =
-				 * userTextEntry1.getText().toString(); int userNumber1 =
-				 * Integer.parseInt(userData1);
-				 */
-
 				Intent intent = new Intent(getApplicationContext(), TaxAct.class);
 				intent.putExtra("My Salary", Shared.Data.Salary);
 				intent.putExtra("My Age", Shared.Data.UserAge);
@@ -81,24 +74,6 @@ public class InfoAct extends Activity {
 		});
 	}
 	
-	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-	// start kids activity
-	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-	private void setKidInfo() {
-		Button btnKidsYes = (Button) findViewById(R.id.btnKidsYes);
-		btnKidsYes.setOnClickListener(new View.OnClickListener() {
-
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-
-				Intent intent = new Intent(getApplicationContext(),
-						KidsAct.class);
-
-				startActivity(intent);
-			}
-		});
-	}
-
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.

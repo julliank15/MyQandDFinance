@@ -39,6 +39,7 @@ public enum Shared
 	public double stateTax;
 	public double federalTax;
 	public int retireAge;
+	public String receivedMessage;
 	
 
 }
