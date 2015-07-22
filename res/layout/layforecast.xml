@@ -1,5 +1,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/greenfinance"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -18,12 +19,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="1dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
         android:gravity="center"
-        android:padding="10dp"
         android:text="Spending Per Month"
-        android:textSize="22sp"
-        android:textStyle="bold" />
+        android:textSize="30sp"
+        style="@style/styTextWhite" />
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
  -->
     <!-- Row 1 -->
@@ -52,7 +55,7 @@
             android:id="@+id/tvRetire"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-           
+            style="@style/styTextWhite"
             android:text="Retirement Savings Monthly: "
              />
 
@@ -60,6 +63,7 @@
             android:id="@+id/etRetire1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/styTextWhite"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
     </LinearLayout>
@@ -80,7 +84,7 @@
         android:id="@+id/tvKids"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-
+        style="@style/styTextWhite"
         android:text="Kid(s) Saving Monthly: "
         />
 
@@ -88,6 +92,7 @@
     	    android:id="@+id/etKids1"
     	    android:layout_width="match_parent"
     	    android:layout_height="wrap_content"
+    	    style="@style/styTextWhite"
     	    android:textAppearance="?android:attr/textAppearanceMedium" />
     
       </LinearLayout>
@@ -99,6 +104,7 @@
         android:layout_height="wrap_content"
         android:gravity="left"
         android:orientation="horizontal"
+        style="@style/styTextWhite"
         android:textAppearance="?android:attr/textAppearanceMedium" >
         
       </LinearLayout>
@@ -107,9 +113,15 @@
 
    <Button
        android:id="@+id/btnForecast"
-       android:layout_width="wrap_content"
+       android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       
-       android:text="Forecast" />
+       android:layout_marginBottom="20dp"
+       android:layout_marginLeft="100dp"
+       android:layout_marginRight="100dp"
+       android:layout_marginTop="70dp"
+       android:gravity="center"
+       android:background="@drawable/backdarkgreen"
+       style="@style/styTextWhite"
+       android:text="Results" />
 
 </LinearLayout>

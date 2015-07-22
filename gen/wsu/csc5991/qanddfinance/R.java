@@ -1920,11 +1920,13 @@ containing a value of this type.
         public static final int abc_textfield_search_activated_mtrl_alpha=0x7f020038;
         public static final int abc_textfield_search_default_mtrl_alpha=0x7f020039;
         public static final int abc_textfield_search_material=0x7f02003a;
-        public static final int backgreen=0x7f02003b;
-        public static final int background=0x7f02003c;
-        public static final int backyellow=0x7f02003d;
-        public static final int financebackground=0x7f02003e;
-        public static final int ic_launcher=0x7f02003f;
+        public static final int backdarkgreen=0x7f02003b;
+        public static final int backgreen=0x7f02003c;
+        public static final int background=0x7f02003d;
+        public static final int backyellow=0x7f02003e;
+        public static final int financebackground=0x7f02003f;
+        public static final int greenfinance=0x7f020040;
+        public static final int ic_launcher=0x7f020041;
     }
     public static final class id {
         public static final int action_bar=0x7f090040;
@@ -1940,13 +1942,13 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f09003d;
         public static final int action_mode_bar_stub=0x7f09003c;
         public static final int action_mode_close_button=0x7f090025;
-        public static final int action_settings=0x7f090093;
+        public static final int action_settings=0x7f090092;
         public static final int activity_chooser_view_content=0x7f090026;
         public static final int alertTitle=0x7f090030;
         public static final int always=0x7f090019;
         public static final int beginning=0x7f090020;
         public static final int btSubmit=0x7f090076;
-        public static final int btnAdvisor=0x7f090092;
+        public static final int btnAdvisor=0x7f090091;
         public static final int btnForecast=0x7f090056;
         public static final int btnKidsYes=0x7f090066;
         public static final int btnMain=0x7f09004f;
@@ -1989,9 +1991,9 @@ containing a value of this type.
         public static final int icon=0x7f09002b;
         public static final int ifRoom=0x7f09001b;
         public static final int image=0x7f090028;
-        public static final int itmAbout=0x7f090096;
-        public static final int itmHelp=0x7f090094;
-        public static final int itmSettings=0x7f090095;
+        public static final int itmAbout=0x7f090095;
+        public static final int itmHelp=0x7f090093;
+        public static final int itmSettings=0x7f090094;
         public static final int listMode=0x7f09000a;
         public static final int list_item=0x7f09002a;
         public static final int middle=0x7f090022;
@@ -2032,7 +2034,6 @@ containing a value of this type.
         public static final int topPanel=0x7f09002e;
         public static final int tv1=0x7f09005b;
         public static final int tvAge=0x7f090060;
-        public static final int tvBlank=0x7f090091;
         public static final int tvCombined=0x7f09008f;
         public static final int tvCombined1=0x7f090090;
         public static final int tvFederal=0x7f090087;
