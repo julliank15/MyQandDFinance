@@ -94,7 +94,7 @@ public class ForecastAct extends Activity
 				Shared.Data.MonthlyRetire = Integer.parseInt(retirementUserData);
 				EditText inflationTextEntry = (EditText) findViewById(R.id.etInflation1);
 				String inflationUserData = inflationTextEntry.getText().toString();
-				Shared.Data.inflation = Integer.parseInt(inflationUserData);
+				Shared.Data.inflation = Double.parseDouble(inflationUserData);
 				
 				// Transfer Data to next activity
 				Intent intent = new Intent(getApplicationContext(), ResultsAct.class);

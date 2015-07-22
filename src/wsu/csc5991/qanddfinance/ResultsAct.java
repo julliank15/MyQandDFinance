@@ -40,13 +40,8 @@ public class ResultsAct extends Activity {
 
 	
 	// Global Variables
-	private int monthlyKids;
+    private double inflation;
 	private int myAge;
-	private int kid1Age;
-	private int kid2Age;
-	private int kid3Age;
-	private int kid4Age;
-	private int kid5Age;
 	private double inflationValue = 0;
 
 	// Declare control variables
@@ -89,17 +84,7 @@ public class ResultsAct extends Activity {
 
 		// Get the intent from previous pages
 		Intent intent = getIntent();
-		monthlyKids = intent.getIntExtra("Monthly Kids", 0);
-		Intent intent1 = getIntent();
-		kid1Age = intent1.getIntExtra("Kid1 Age", 0);
-		Intent intent2 = getIntent();
-		kid2Age = intent2.getIntExtra("Kid2 Age", 0);
-		Intent intent3 = getIntent();
-		kid3Age = intent3.getIntExtra("Kid3 Age", 0);
-		Intent intent4 = getIntent();
-		kid4Age = intent4.getIntExtra("Kid4 Age", 0);
-		Intent intent5 = getIntent();
-		kid5Age = intent5.getIntExtra("Kid5 Age", 0);
+		inflation = intent.getIntExtra("Inflation", 0);
 		Intent intent6 = getIntent();
 		myAge = intent6.getIntExtra("My Age", 0);
 
@@ -107,7 +92,7 @@ public class ResultsAct extends Activity {
 		double retirementSavings = Shared.Data.MonthlyRetire * 12;
 		for (int i = 1; i < (Shared.Data.retireAge - Shared.Data.UserAge); i++) {
 			inflationValue = (retirementSavings + inflationValue);
-			inflationValue = inflationValue - (inflationValue * 0.0322);
+			inflationValue = inflationValue - (inflationValue * (Shared.Data.inflation/100));
 			// retirementSavings = retirementSavings -
 			// (retirementSavings*0.0322);
 
