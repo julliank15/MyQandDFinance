@@ -1,8 +1,5 @@
 package wsu.csc5991.qanddfinance;
 
-import java.text.DecimalFormat;
-import java.text.DecimalFormatSymbols;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,7 +12,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.util.Calendar;
@@ -40,13 +36,7 @@ public class ResultsAct extends Activity {
 
 	
 	// Global Variables
-	private int monthlyKids;
 	private int myAge;
-	private int kid1Age;
-	private int kid2Age;
-	private int kid3Age;
-	private int kid4Age;
-	private int kid5Age;
 	private double inflationValue = 0;
 
 	// Declare control variables
@@ -86,20 +76,7 @@ public class ResultsAct extends Activity {
 		etPhoneNumber = (EditText) findViewById(R.id.etPhoneNumber);
 				
 		
-
 		// Get the intent from previous pages
-		Intent intent = getIntent();
-		monthlyKids = intent.getIntExtra("Monthly Kids", 0);
-		Intent intent1 = getIntent();
-		kid1Age = intent1.getIntExtra("Kid1 Age", 0);
-		Intent intent2 = getIntent();
-		kid2Age = intent2.getIntExtra("Kid2 Age", 0);
-		Intent intent3 = getIntent();
-		kid3Age = intent3.getIntExtra("Kid3 Age", 0);
-		Intent intent4 = getIntent();
-		kid4Age = intent4.getIntExtra("Kid4 Age", 0);
-		Intent intent5 = getIntent();
-		kid5Age = intent5.getIntExtra("Kid5 Age", 0);
 		Intent intent6 = getIntent();
 		myAge = intent6.getIntExtra("My Age", 0);
 
@@ -129,8 +106,8 @@ public class ResultsAct extends Activity {
 	// start MessageAct activity
 	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	private void sendMessageInfo() {
-		Button btnKidsYes = (Button) findViewById(R.id.btnSmsMessage);
-		btnKidsYes.setOnClickListener(new View.OnClickListener() {
+		Button btnSendMessage = (Button) findViewById(R.id.btnSmsMessage);
+		btnSendMessage.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v)
 			{
