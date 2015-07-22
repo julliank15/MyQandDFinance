@@ -1,5 +1,8 @@
 package wsu.csc5991.qanddfinance;
 
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,6 +22,16 @@ public class ResultsAct extends Activity {
 	private int kid5Age;
 	private double inflationValue = 0;
 
+	//method to format decimals to two significant figures
+    private static DecimalFormatSymbols DFS;
+    private static DecimalFormat myFormatter;
+    public static String DoubleToFormatedString(double value) {
+        DFS = new DecimalFormatSymbols();
+        DFS.setDecimalSeparator('.');
+        myFormatter = new DecimalFormat("#.00");
+        myFormatter.setDecimalFormatSymbols(DFS);
+        return myFormatter.format(value);
+    }
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -57,7 +70,7 @@ public class ResultsAct extends Activity {
 		
 		//Display the values
 		TextView displayMonthlyRetirement = (TextView) findViewById(R.id.tvMonthlyRetire1);
-		displayMonthlyRetirement.setText("" + inflationValue);
+		displayMonthlyRetirement.setText("" + DoubleToFormatedString (inflationValue));
 		TextView displayKid1Age = (TextView) findViewById(R.id.tvKid1Savings1);
 		displayKid1Age.setText("" + kid1Savings);
 		TextView displayKid2Age = (TextView) findViewById(R.id.tvKid2Savings1);
