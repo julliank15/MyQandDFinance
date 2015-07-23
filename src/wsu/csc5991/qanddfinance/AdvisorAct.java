@@ -102,6 +102,11 @@ public class AdvisorAct extends Activity
         TextView displayFlexSpending = (TextView) findViewById(R.id.tvFlex1);
         displayFlexSpending.setText("" + DoubleToFormatedString(flexSpending));
         
+        //define enum variables for text message output
+        Shared.Data.fixedCost = DoubleToFormatedString(fixedCosts);
+    	Shared.Data.flexSpending = DoubleToFormatedString(flexSpending);
+    	Shared.Data.savings = DoubleToFormatedString(savings);
+        
         //Transfer Data to next pages
         transferToForecast();
 	

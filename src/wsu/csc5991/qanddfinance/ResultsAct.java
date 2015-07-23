@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.telephony.SmsManager;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -12,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.util.Calendar;
@@ -32,35 +34,35 @@ public class ResultsAct extends Activity {
 			"0000");
 
 	// Declare SMS constants
-    private static final int MAX_MESSAGE_LENGTH = 140;
+	private static final int MAX_MESSAGE_LENGTH = 140;
 
-	
 	// Global Variables
-    private double inflation;
+	private double inflation;
 	private int myAge;
 	private double inflationValue = 0;
 
 	// Declare control variables
 	private EditText etSendMessage;
-    private EditText etPhoneNumber;
-    private Button btnSendMessage;
-    
-    // Declare SMS variables
+	private EditText etPhoneNumber;
+	private Button btnSendMessage;
+
+	// Declare SMS variables
 	private SmsManager smsManager;
-	
+
 	// ----------------------------------------------------------------
-	//method to format decimals to two significant figures
+	// method to format decimals to two significant figures
 	// ----------------------------------------------------------------
 
-    private static DecimalFormatSymbols DFS;
-    private static DecimalFormat myFormatter;
-    public static String DoubleToFormatedString(double value) {
-        DFS = new DecimalFormatSymbols();
-        DFS.setDecimalSeparator('.');
-        myFormatter = new DecimalFormat("#.00");
-        myFormatter.setDecimalFormatSymbols(DFS);
-        return myFormatter.format(value);
-    }
+	private static DecimalFormatSymbols DFS;
+	private static DecimalFormat myFormatter;
+
+	public static String DoubleToFormatedString(double value) {
+		DFS = new DecimalFormatSymbols();
+		DFS.setDecimalSeparator('.');
+		myFormatter = new DecimalFormat("#.00");
+		myFormatter.setDecimalFormatSymbols(DFS);
+		return myFormatter.format(value);
+	}
 
 	// ----------------------------------------------------------------
 	// onCreate
@@ -70,13 +72,12 @@ public class ResultsAct extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.layresults);
-		
+
 		// ----------------------------------------------------------------
 		// Define send message controls
 		// ----------------------------------------------------------------
 		etPhoneNumber = (EditText) findViewById(R.id.etPhoneNumber);
-				
-		
+
 		// Get the intent from previous pages
 
 		Intent intent = getIntent();
@@ -88,7 +89,8 @@ public class ResultsAct extends Activity {
 		double retirementSavings = Shared.Data.MonthlyRetire * 12;
 		for (int i = 0; i < (Shared.Data.retireAge - Shared.Data.UserAge); i++) {
 			inflationValue = (retirementSavings + inflationValue);
-			inflationValue = inflationValue - (inflationValue * (Shared.Data.inflation/100));
+			inflationValue = inflationValue
+					- (inflationValue * (Shared.Data.inflation / 100));
 			// retirementSavings = retirementSavings -
 			// (retirementSavings*0.0322);
 
@@ -103,65 +105,38 @@ public class ResultsAct extends Activity {
 		// s~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		// send message with results
 		// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-		sendMessageInfo();
+		Button btnSendMessage = (Button) findViewById(R.id.btnSmsMessage);
+		btnSendMessage.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				sendMessageInfo();
+			}
+		});
 	}
 
 	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	// start MessageAct activity
 	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	private void sendMessageInfo() {
-		Button btnSendMessage = (Button) findViewById(R.id.btnSmsMessage);
-		btnSendMessage.setOnClickListener(new View.OnClickListener() {
+		// Get send message and phone number
+		Log.i("Send SMS", "");
+		String msg = "Salary After Tax: $"
+				+ DoubleToFormatedString(Shared.Data.mySalaryAfterTax) + "\n"
+				+ "Savings: " + Shared.Data.savings + "\n" + "Flex Spending: "
+				+ Shared.Data.flexSpending + "\n" + "Fixed Cost"
+				+ Shared.Data.fixedCost + "\n";
+		String num = etPhoneNumber.getText().toString();
 
-			public void onClick(View v)
-			{
-				// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-				// Get send message and phone number
-	    		// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-		    	String msg = "Salary After Tax: $" + DoubleToFormatedString(Shared.Data.mySalaryAfterTax) + "\n"+
-		    				 "Spouse Salary: $" + DoubleToFormatedString(Shared.Data.spouseSalaryAfterTax) + "\n"+
-		    				 "Combined Salary: $" + DoubleToFormatedString(Shared.Data.combinedAfterTax) + "\n";
-		    	String num = etPhoneNumber.getText().toString();
-
-		    	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-		    	// Test if send message is blank
-	    		// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-		    	if (msg.length() == 0)
-		    		Toast.makeText(getApplicationContext(),
-		    				"Error: the send message cannot be blank.", 
-		    				Toast.LENGTH_SHORT).show();
-		    	
-		    	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-		    	// Test if send message is too long
-	    		// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-		    	else if (msg.length() > MAX_MESSAGE_LENGTH)
-		    		Toast.makeText(getApplicationContext(),
-		    				"Error: the send message cannot be " +
-		    				"longer than " + MAX_MESSAGE_LENGTH  + 
-		    				" characters.", Toast.LENGTH_SHORT).show();
-		    	
-		    	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-		    	// Test if phone number is blank
-	    		// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-		    	else if (num.length() == 0)
-		    		Toast.makeText(getApplicationContext(),
-		    				"Error: the phone number cannot be blank.", 
-		    				Toast.LENGTH_SHORT).show();
-				
-		    	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-		    	// Send message
-		    	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-		    	else
-		    	{
-		    		smsManager.sendTextMessage(num, null, msg, null, null);
-		    	}
-				// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-				//Toast alerting sender message has been sent
-	    		// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-				Toast.makeText(getApplicationContext(),  "Message Sent", Toast.LENGTH_LONG).show();
-			}
-		});
-	}
+		try {
+			SmsManager smsManager = SmsManager.getDefault();
+			smsManager.sendTextMessage(num, null, msg, null, null);
+			Toast.makeText(getApplicationContext(), "Message Sent",
+					Toast.LENGTH_LONG).show();
+		} catch (Exception e) {
+			Toast.makeText(getApplicationContext(),
+					"SMS faild, please try again.", Toast.LENGTH_LONG).show();
+			e.printStackTrace();
+		}
+	};
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

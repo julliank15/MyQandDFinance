@@ -34,6 +34,10 @@ public enum Shared
 	public int retireAge;
 	public double inflation = 3.22;
 	public String receivedMessage;
+	public String fixedCost;
+	public String flexSpending;
+	public String savings;
+	
 
 	
 
