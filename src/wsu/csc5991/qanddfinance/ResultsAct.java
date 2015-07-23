@@ -121,8 +121,8 @@ public class ResultsAct extends Activity {
 		Log.i("Send SMS", "");
 		String msg = "Salary After Tax: $"
 				+ DoubleToFormatedString(Shared.Data.mySalaryAfterTax) + "\n"
-				+ "Savings: " + Shared.Data.savings + "\n" + "Flex Spending: "
-				+ Shared.Data.flexSpending + "\n" + "Fixed Cost"
+				+ "Savings: $" + Shared.Data.savings + "\n" + "Flex Spending: $"
+				+ Shared.Data.flexSpending + "\n" + "Fixed Cost: $"
 				+ Shared.Data.fixedCost + "\n";
 		String num = etPhoneNumber.getText().toString();
 
